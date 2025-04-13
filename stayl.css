@@ -1,4 +1,4 @@
-/* Reset dan Base Styles */
+/* Reset CSS */
 *, html {
     margin: 0;
     padding: 0;
@@ -8,22 +8,20 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 .container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Navbar Responsif */
+/* Navbar Styles */
 .navbar-container {
     background-color: rgb(185, 12, 12);
     width: 100%;
-    padding: 1rem 0;
+    height: auto;
+    padding: 15px 0;
 }
 
 .ul-navbar {
@@ -34,18 +32,18 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 0.5rem;
 }
 
 .li-navbar {
-    padding: 0.8rem 1.2rem;
+    padding: 10px 15px;
+    margin: 5px;
     color: rgb(255, 250, 250);
-    font-size: clamp(1rem, 2vw, 1.8rem);
-    transition: all 0.4s ease;
+    font-size: 1.2rem;
 }
 
 .li-navbar:hover {
     background-color: rgb(153, 6, 6);
+    transition: .5s ease-in-out;
     border-radius: 8px;
 }
 
@@ -53,10 +51,9 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 800;
-    white-space: nowrap;
 }
 
-/* Konten Utama */
+/* Content Styles */
 .content-container1, 
 .content-container2, 
 .content-container3 {
@@ -64,8 +61,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    padding: 2rem 1rem;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .content-container2, 
@@ -76,76 +73,86 @@ body {
 .a-content {
     color: white;
     text-decoration: none;
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: 1.5rem;
     width: 100%;
     max-width: 720px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 20px;
 }
 
 .img-content {
     width: 100%;
-    max-width: min(90vw, 500px);
+    max-width: 300px;
     height: auto;
-    margin: 1rem 0;
-    object-fit: contain;
+    margin: 20px 0;
 }
 
 #biodata {
     background: red;
-    width: min(90%, 750px);
-    padding: 1.5rem;
-    margin: 1rem 0;
+    height: auto;
+    width: 100%;
+    max-width: 750px;
+    margin: 20px 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     color: white;
-    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* Footer */
+/* Footer Styles */
 .container-footer {
+    height: auto;
+    min-height: 100px;
     background-color: rgb(185, 12, 12);
-    padding: 1.5rem;
-    text-align: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .h1-footer {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: 1.5rem;
     color: white;
-    margin: 0;
+    text-align: center;
 }
 
-/* Media Queries */
-@media (max-width: 480px) {
+/* Media Queries untuk Responsivitas */
+@media (min-width: 768px) {
     .li-navbar {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .content-container1,
-    .content-container2,
-    .content-container3 {
-        padding: 1rem 0.5rem;
-    }
-    
-    .a-content {
-        padding: 0.5rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .a-content {
-        max-width: 900px;
+        font-size: 1.5rem;
+        padding: 15px 25px;
     }
     
     .img-content {
-        max-width: 600px;
+        max-width: 500px;
+    }
+    
+    .h1-footer {
+        font-size: 2rem;
+    }
+    
+    .a-content {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar-container {
+        height: 100px;
+    }
+    
+    .ul-navbar {
+        height: 100px;
+    }
+    
+    .li-navbar {
+        font-size: 1.8rem;
     }
 }
