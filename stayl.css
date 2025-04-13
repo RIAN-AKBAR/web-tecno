@@ -1,4 +1,4 @@
-/* Reset CSS */
+/* Reset dan Base Styles */
 *, html {
     margin: 0;
     padding: 0;
@@ -6,22 +6,27 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Container Utama */
 .container {
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Navbar Styles */
+/* Navbar Responsif */
 .navbar-container {
-    background-color: rgb(185, 12, 12);
+    background-color: #b90c0c;
     width: 100%;
-    height: auto;
-    padding: 15px 0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .ul-navbar {
@@ -32,127 +37,116 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    gap: 0.5rem;
 }
 
 .li-navbar {
-    padding: 10px 15px;
-    margin: 5px;
-    color: rgb(255, 250, 250);
-    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    color: #fffafa;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    transition: all 0.4s ease;
 }
 
 .li-navbar:hover {
-    background-color: rgb(153, 6, 6);
-    transition: .5s ease-in-out;
+    background-color: #990606;
     border-radius: 8px;
 }
 
 .a-navbar {
     color: white;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
-/* Content Styles */
-.content-container1, 
-.content-container2, 
-.content-container3 {
-    background-color: rgb(29, 27, 27);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+/* Konten Utama */
+.content-section {
+    flex: 1;
+    padding: 2rem 1rem;
+}
+
+.content-container1 {
+    background-color: #1d1b1b;
 }
 
 .content-container2, 
 .content-container3 {
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
 }
 
 .a-content {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
     width: 100%;
-    max-width: 720px;
-    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .img-content {
     width: 100%;
-    max-width: 300px;
+    max-width: min(90vw, 600px);
     height: auto;
-    margin: 20px 0;
+    margin: 2rem 0;
+    border-radius: 8px;
+    object-fit: contain;
 }
 
 #biodata {
-    background: red;
-    height: auto;
-    width: 100%;
-    max-width: 750px;
-    margin: 20px 0;
-    padding: 20px;
+    background: #b90c0c;
+    width: min(90%, 750px);
+    padding: 2rem;
+    margin: 2rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     color: white;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* Footer Styles */
+/* Footer */
 .container-footer {
-    height: auto;
-    min-height: 100px;
-    background-color: rgb(185, 12, 12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.h1-footer {
-    font-size: 1.5rem;
-    color: white;
+    background-color: #b90c0c;
+    padding: 1.5rem;
     text-align: center;
 }
 
-/* Media Queries untuk Responsivitas */
-@media (min-width: 768px) {
+.h1-footer {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: white;
+    margin: 0;
+}
+
+/* Media Queries Khusus */
+@media (max-width: 480px) {
+    .ul-navbar {
+        gap: 0.3rem;
+    }
+    
     .li-navbar {
-        font-size: 1.5rem;
-        padding: 15px 25px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
     }
     
-    .img-content {
-        max-width: 500px;
-    }
-    
-    .h1-footer {
-        font-size: 2rem;
-    }
-    
-    .a-content {
-        font-size: 2rem;
+    .content-section {
+        padding: 1rem 0.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    .navbar-container {
-        height: 100px;
+@media (min-width: 1200px) {
+    .a-content {
+        flex-direction: row;
+        gap: 3rem;
+        text-align: left;
     }
     
-    .ul-navbar {
-        height: 100px;
-    }
-    
-    .li-navbar {
-        font-size: 1.8rem;
+    .img-content {
+        margin: 0;
     }
 }
