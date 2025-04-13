@@ -6,27 +6,24 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Container Utama */
-.container {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Navbar Responsif */
 .navbar-container {
-    background-color: #b90c0c;
+    background-color: rgb(185, 12, 12);
     width: 100%;
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .ul-navbar {
@@ -42,36 +39,38 @@ body {
 
 .li-navbar {
     padding: 0.8rem 1.2rem;
-    color: #fffafa;
+    color: rgb(255, 250, 250);
     font-size: clamp(1rem, 2vw, 1.8rem);
     transition: all 0.4s ease;
 }
 
 .li-navbar:hover {
-    background-color: #990606;
+    background-color: rgb(153, 6, 6);
     border-radius: 8px;
 }
 
 .a-navbar {
     color: white;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     white-space: nowrap;
 }
 
 /* Konten Utama */
-.content-section {
+.content-container1, 
+.content-container2, 
+.content-container3 {
+    background-color: rgb(29, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
     padding: 2rem 1rem;
 }
 
-.content-container1 {
-    background-color: #1d1b1b;
-}
-
 .content-container2, 
 .content-container3 {
-    background-color: #000000;
+    background-color: rgb(0, 0, 0);
 }
 
 .a-content {
@@ -79,10 +78,10 @@ body {
     text-decoration: none;
     font-size: clamp(1.2rem, 3vw, 2rem);
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -90,18 +89,17 @@ body {
 
 .img-content {
     width: 100%;
-    max-width: min(90vw, 600px);
+    max-width: min(90vw, 500px);
     height: auto;
-    margin: 2rem 0;
-    border-radius: 8px;
+    margin: 1rem 0;
     object-fit: contain;
 }
 
 #biodata {
-    background: #b90c0c;
+    background: red;
     width: min(90%, 750px);
-    padding: 2rem;
-    margin: 2rem auto;
+    padding: 1.5rem;
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,9 +110,10 @@ body {
 
 /* Footer */
 .container-footer {
-    background-color: #b90c0c;
+    background-color: rgb(185, 12, 12);
     padding: 1.5rem;
     text-align: center;
+    width: 100%;
 }
 
 .h1-footer {
@@ -123,30 +122,30 @@ body {
     margin: 0;
 }
 
-/* Media Queries Khusus */
+/* Media Queries */
 @media (max-width: 480px) {
-    .ul-navbar {
-        gap: 0.3rem;
-    }
-    
     .li-navbar {
-        padding: 0.5rem 0.8rem;
+        padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
     
-    .content-section {
+    .content-container1,
+    .content-container2,
+    .content-container3 {
         padding: 1rem 0.5rem;
+    }
+    
+    .a-content {
+        padding: 0.5rem;
     }
 }
 
 @media (min-width: 1200px) {
     .a-content {
-        flex-direction: row;
-        gap: 3rem;
-        text-align: left;
+        max-width: 900px;
     }
     
     .img-content {
-        margin: 0;
+        max-width: 600px;
     }
 }
