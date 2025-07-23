@@ -19,7 +19,7 @@ function displayCommunityInfo() {
     infoElement.className = 'community-info';
     infoElement.innerHTML = `
       <p>Anggota aktif: 8+ pelajar</p>
-      <p>Berdiri sejak: JULI 2023</p>
+      <p>Berdiri sejak: JULI 2024</p>
     `;
     biodataElement.appendChild(infoElement);
   }
