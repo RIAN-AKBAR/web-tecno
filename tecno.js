@@ -18,8 +18,8 @@ function displayCommunityInfo() {
     const infoElement = document.createElement('div');
     infoElement.className = 'community-info';
     infoElement.innerHTML = `
-      <p>Anggota aktif: 50+ pelajar</p>
-      <p>Berdiri sejak: Januari 2023</p>
+      <p>Anggota aktif: 8+ pelajar</p>
+      <p>Berdiri sejak: JULI 2023</p>
     `;
     biodataElement.appendChild(infoElement);
   }
